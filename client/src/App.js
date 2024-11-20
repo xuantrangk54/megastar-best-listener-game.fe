@@ -3,10 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navigation from './Navigation';
 import AdminPage from './AdminPage'
+import PlayerPage from './PlayerPage'
 
-const PlayerPage = () => {
-  return <div>Player Page</div>;
-};
 
 const App = () => {
   return (

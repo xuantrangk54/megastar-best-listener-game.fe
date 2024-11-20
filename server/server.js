@@ -30,14 +30,26 @@ const io = new Server(server, {
 io.on('connection', (socket) => {
     console.log('A user connected');
   
+
+    socket.on ('joinRoom', (roomName) => {
+      socket.join (roomName);
+      socket.emit ('joinedRoom', roomName);
+    });
+
     // Gửi một thông điệp đến client sau khi kết nối
     socket.emit('server-message', 'Hello from server!');
-  
+    socket.emit('wellcome', 'Hello from server!');
+
     // Xử lý các sự kiện khác từ client (nếu có)
     socket.on('disconnect', () => {
       console.log('User disconnected');
     });
+
+    socket.on ('admin-send-question', (data) => {
+        io.to('playerRoom').emit('show-question', data);
+    });
   });
+
   
 app.use(express.static(path.join(__dirname, '../client/build')));
 // Xử lý route cho React sau khi build
