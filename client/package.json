@@ -10,12 +10,14 @@
     "ajv-keywords": "^5.1.0",
     "bootstrap": "^5.3.3",
     "concurrently": "^9.1.0",
+    "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "megastar-best-listener-game.fe": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
+    "socket.io-client": "^4.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
